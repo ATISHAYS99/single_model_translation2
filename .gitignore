@@ -1,0 +1,6 @@
+/.venv
+/Logs
+/uploads
+/web.config
+/whisper_large_translation
+/__pycache__

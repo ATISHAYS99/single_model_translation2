@@ -1,0 +1,336 @@
+
+
+.container-main {
+    background-image: url('/static/images/AIImage2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 8vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.text-container-main {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    position: absolute;
+    height: 40vh;
+    left: 15%;
+    right: 15%;
+    bottom: 20%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    background-color: rgba(35, 109, 225, 0.763);
+    color: white;
+    margin-top: 2%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.file-label:hover {
+    transform: scale(1.1);
+    background-color: rgba(35, 108, 225, 0.916);
+    border: 1px solid rgba(35, 109, 225, 0.763);
+}
+
+@media screen and (max-width: 2000px) {
+    #transcribeBtn {
+        position: absolute;
+        bottom: 14%;
+        left: 40%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        padding: 10px 40px;
+        font-size: 16px;
+        background-color: rgba(35, 108, 225, 0.916);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    #anotheraudio {
+        position: absolute;
+        bottom: 25.5%;
+        left: 60%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        padding: 10px 40px;
+        font-size: 16px;
+        background-color: rgba(35, 108, 225, 0.916);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #transcribeBtn {
+        left: 30%;
+    }
+
+    #anotheraudio {
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #transcribeBtn {
+        bottom: 18%;
+        left: 50%;
+    }
+
+    #anotheraudio {
+        bottom: 12%;
+        left: 50%;
+    }
+}
+
+
+#cancel
+    {position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        padding: 10px 40px;
+        font-size: 16px;
+        background-color: rgba(35, 108, 225, 0.916);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+}
+#downloadBtn{position: absolute;
+    bottom: 20px;
+    left: 59%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 16px;
+    background-color: rgba(35, 108, 225, 0.916);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;}
+ 
+ #tryanother
+ {
+    position: absolute;
+    bottom: 20px;
+    left: 43%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 16px;
+    background-color: white;
+    color: rgba(35, 108, 225, 0.916);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+ }   
+
+
+#downloadBtn:hover,
+#transcribeBtn:hover,
+#anotheraudio:hover,
+#cancel:hover ,
+#tryanother:hover{
+    transform: translateX(-50%) scale(1.1);
+}
+
+#fileInfoSection {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    border: none;
+}
+
+#fileInfoSection table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#fileInfoSection table tr {
+    border-bottom: 1px solid rgb(235, 234, 234);
+}
+
+#fileInfoSection table tr:first-child {
+    font-weight: bold;
+}
+
+#fileInfoSection table td {
+    padding: 8px;
+}
+
+.border-top {
+    border-top: 1px solid #fff;
+}
+
+.transcription-output {
+    margin-top: 5px;
+    color: rgb(43, 43, 43);
+    font-size: 18px;
+    overflow-y: auto;
+    max-height: 200px;
+    text-align: justify;
+}
+
+.transcription-output::-webkit-scrollbar {
+    width: 6px;
+}
+
+.transcription-output::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.transcription-output::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+
+.transcription-output::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*.loader-bar {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #6ab9ed;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 48%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+
+}*/
+ 
+/*@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}*/
+
+/* HTML: <div class="loader"></div> */
+.loader-bar {
+    width: 60px;
+    aspect-ratio: 1;
+    border: 15px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+  }
+  .loader-bar::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+    border: 15px solid rgba(35, 108, 225, 0.916);
+    animation: l18 2s infinite linear;
+  }
+  @keyframes l18 {
+      0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
+  }
+
+audio {
+    width: 40%; /* Set the width to 50% of the container */
+    margin-top: 20px; /* Add some space above the audio bar */
+    background-color: transparent; /* Set background color to transparent */
+    border: none; /* Remove border */
+    outline: none; /* Remove default outline */
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: transparent; /* Set background color of control panel to transparent */
+}
+
+.radio-inline {
+    margin-right: 20px; /* Adds space between radio button groups */
+}
+.radio-inline input {
+    margin-right: 5px; /* Adds space between the radio button and the label text */
+}
+.custom-alert-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.custom-alert-content {
+ 
+        margin-top: 50px;
+        background-color: orange;
+        padding: 14px;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+.custom-alert-close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-alert-close:hover {
+    color: white;
+}
